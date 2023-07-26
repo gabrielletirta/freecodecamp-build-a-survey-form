@@ -1,0 +1,141 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Aesthetics Survey Form</title>
+    <link rel="stylesheet" href="styles.css"
+  </head>
+  <body>
+    <h1 class="heading" id="title">Grrrooovey Survey Form</h1>
+    <p id="description" class="description">Live, Laugh, Slay </p>
+    <form method="post" id="survey-form">
+      <fieldset>
+        <label for="first-name">First Name :<input class="textform" id="first-name" name="first-name" type="text" required placeholder="Enter your first name.."/></label>
+        <label for="name" id="name-label">Surname :<input class="textform"  id="name" name="surname" type="text" required placeholder="Enter your surname.."/></label>
+        <label for="email" id="email-label">E-mail :<input class="textform"  id="email" name="email" type="email" required placeholder="Enter your e-mail.."/></label>
+        <label for="number" id="number-label">Age :<input class="textform"  id="number" name="age" type="number" min="17" max="80" pattern="[18-90]{2,}" required placeholder="Enter your age.."/></label>
+      </fieldset>
+      <fieldset>
+        <label>Are you a current member?</label>
+        <label for="member"><input type="radio" id="member" name="are-member" class="inline"required value="member"/> Member</label>
+        <label for="non-member"><input type="radio" id="non-member" name="are-member" class="inline" required value="non-member"/> Non-member</label>
+        <label> Please select branch:</label>
+        <label for="store"><input type="radio" id="Melbourne" name="inline" class="inline" required value="melbourne"> Melbourne</label>
+        <label for="store"><input type="radio" id="Sydney" name="inline" class="inline" required value="sydney">  Sydney</label>
+      </fieldset>
+      <fieldset>
+        <label for="treatment">Service purchased:</label>
+        <select id="dropdown" name="treatment">
+          <option value="">Select Your service..</option>
+          <option value="1">Only Drink</option>
+          <option value="2">Only food</option>
+          <option value="3">Drink and food</option>
+          <option value="4">VIP</option>
+          <option value="5">VVIP</option>
+        </select>
+        <label for="feedback">Feedback:
+          <textarea id="feedback" name="feedback" rows="3" cols="50" placeholder="Write a feedback / suggestions.."></textarea>
+        <label for="subscribe"><input type="checkbox" id="subscribe" name="subscribe" class="subscribe" class="subscribe" value="subscribe"> Do you want to subscribe for email for monthly promotions?</label>
+        <label for="tnc"><input type="checkbox" id="tnc" name="tnc" class="tnc"value="tnc"> Do you agree with our terms and conditions?</label>
+      </fieldset>
+    <input type="submit" id="submit" value="Click Here To Submit">
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+body{
+  width: 90%;
+  height: 100vh;
+  margin: 50;
+  font-family: "Didot"; 
+  color: white;
+  background-image: url("https://i.pinimg.com/originals/a4/70/f7/a470f754f1b5ce753919478c25c48e20.jpg");
+  background-position: center;
+}
+
+h1{
+  margin: 1em auto;
+  text-align:center;
+  text-shadow: -5px 5px navy;
+}
+
+.description{
+  text-align:center;
+
+}
+
+label{
+  display: block;
+  margin: 0.5rem 0;
+  padding-bottom: 0.25rem;
+}
+
+.member{
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+fieldset{
+  border: none;
+}
+
+input[type="text"], input[type="email"], input[type="number"], textarea {
+  display: block;
+}
+
+form{
+  width: 80%;
+  background-color: #335A9880;
+  margin: 20px 50px;
+  padding: 2.5rem;
+  
+}
+
+.inline{
+  width: unset;
+  margin: 0 0.5em 0 0;
+}
+
+input[type="submit"]{
+  width: 100%;
+  margin: auto auto;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center
+  padding: 0.375rem 0.75rem;
+}
+
+.heading {
+  animation: wavy-animation 2s infinite linear;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+@keyframes wavy-animation {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+.textform{
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+}
+
+** end of undefined **
+
